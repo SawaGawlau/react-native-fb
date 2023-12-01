@@ -1,0 +1,17 @@
+{
+    "name": "react-native-fb",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "react-native start",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@react-native-firebase/app": "^18.7.1",
+        "@react-native-firebase/messaging": "^18.7.1",
+        "axios": "^1.6.2"
+    }
+}
