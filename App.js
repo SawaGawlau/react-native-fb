@@ -3,8 +3,8 @@
 import React, { useEffect } from "react"
 import { SafeAreaView, View, Text } from "react-native"
 import messaging from "@react-native-firebase/messaging"
-import NotificationHandler from "./NotificationHandler" // Adjust the path
-import axios from "axios" // Import Axios for making HTTP requests
+import NotificationHandler from "./NotificationHandler"
+import axios from "axios"
 
 const App = () => {
     // Handle background messages
@@ -28,7 +28,10 @@ const App = () => {
 
         const sendTokenToBackend = async (token) => {
             try {
-                await axios.post("YOUR_BACKEND_API_ENDPOINT", { token })
+                await axios.post(
+                    "http://localhost:3000/notify/send-notification",
+                    { token }
+                )
                 console.log("Token sent to backend successfully")
             } catch (error) {
                 console.error("Error sending token to backend:", error)
